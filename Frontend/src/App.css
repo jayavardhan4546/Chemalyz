@@ -1,0 +1,113 @@
+body {
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #e0e0e0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1e1e1e; /* Dark navbar */
+  padding: 8px;
+}
+
+.navbar-brand {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #00d4ff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+  color: #29a2e2 !important;
+}
+
+.navbar-brand:active {
+  color: #006289 !important;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #00ffee;
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  position: relative;
+  padding: 10px 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #cbf7ed;
+  text-shadow: 0 0 10px #cbf7ed, 0 0 20px #cbf7ed;
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #00ffee;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Upload and Output Boxes */
+.upload-box, .output-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Video and Image */
+.video-stream, .captured-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Sections */
+.section {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+  color: #00d4ff;
+}
+
+.section p, .section ul {
+  color: #e0e0e0;
+  font-size: 18px;
+}
+
+/* Output Text */
+.output-text {
+  white-space: pre-wrap;
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+  margin: 10px 0;
+  padding-left: 20px;
+}
