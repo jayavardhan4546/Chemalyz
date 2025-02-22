@@ -1,20 +1,21 @@
-# Use an official Node.js image
+# Use Node.js official image
 FROM node:18
 
-# Install Tesseract-OCR
+# Install dependencies for OCR processing
 RUN apt-get update && apt-get install -y tesseract-ocr
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json from the root (not Backend/)
+# Copy package files and install backend dependencies
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
 
-# Copy the entire backend source (assuming Backend/ contains backend code)
-COPY Backend/. .
+# Copy backend source code
+COPY . .
+
+# Copy the frontend build folder
+COPY build ./build
 
 # Expose the backend port
 EXPOSE 5000
