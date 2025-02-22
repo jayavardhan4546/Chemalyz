@@ -4,15 +4,15 @@ FROM node:18
 # Install Tesseract-OCR
 RUN apt-get update && apt-get install -y tesseract-ocr
 
-# Set working directory
+# Set working directory inside Backend
 WORKDIR /app
 
 # Copy backend package files and install dependencies
-COPY package*.json ./
+COPY Backend/package*.json ./
 RUN npm install
 
 # Copy the entire backend source
-COPY . .
+COPY Backend ./
 
 # Expose the port (match your backend port)
 EXPOSE 5000
