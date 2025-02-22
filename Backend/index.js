@@ -10,7 +10,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ✅ Corrected frontend path (now inside Backend/build)
-const FRONTEND_DIR = path.join(__dirname, 'Backend', 'build');
+const FRONTEND_DIR = path.join(__dirname, 'build');
+
 
 // Paths for file operations
 const TEMP_IMAGE_PATH = path.join(__dirname, 'temp_image.jpg');
