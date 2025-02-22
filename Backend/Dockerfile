@@ -21,7 +21,7 @@ WORKDIR /app/Frontend
 RUN npm install
 RUN npm run build
 
-# ✅ Ensure correct frontend build path
+# ✅ Move built frontend files to the correct backend path
 WORKDIR /app
 RUN mv /app/Frontend/build /app/Backend/
 
