@@ -7,15 +7,23 @@ RUN apt-get update && apt-get install -y tesseract-ocr
 # Set working directory
 WORKDIR /app
 
-# Copy package files and install backend dependencies
+# Copy package files
 COPY package*.json ./
+
+# Install backend dependencies
 RUN npm install
 
 # Copy backend source code
 COPY . .
 
-# Copy the frontend build folder
-COPY build ./build
+# ✅ Install frontend dependencies & build React app inside Docker
+WORKDIR /app/Frontend
+RUN npm install
+RUN npm run build
+
+# ✅ Move built frontend files to backend
+WORKDIR /app
+RUN mv /app/Frontend/build ./build
 
 # Expose the backend port
 EXPOSE 5000
