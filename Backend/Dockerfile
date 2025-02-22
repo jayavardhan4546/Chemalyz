@@ -21,9 +21,9 @@ WORKDIR /app/Frontend
 RUN npm install
 RUN npm run build
 
-# ✅ Move built frontend files to Backend
+# ✅ Ensure correct frontend build path
 WORKDIR /app
-RUN mv /app/Frontend/build /app/Backend/build
+RUN mv /app/Frontend/build /app/Backend/
 
 # Expose the backend port
 EXPOSE 5000
