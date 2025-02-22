@@ -29,5 +29,5 @@ RUN mv /app/Frontend/build ./build
 EXPOSE 5000
 
 # Start the backend server
-CMD ["node", "backend/index.js"]
+CMD ["node", "Backend/index.js"]
 
