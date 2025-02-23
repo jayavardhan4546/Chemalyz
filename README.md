@@ -65,5 +65,5 @@ If you'd like to contribute:
 This project is open-source under the **MIT License**.
 
 ---
-🔗 **Maintainer:** [Your Name]
-📬 **Contact:** [Your Email or GitHub Profile]
+🔗 **Maintainer:** Guntupalli Jayavardhan
+📬 **Contact:** gjayavardhan17@gmail.com
